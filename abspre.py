@@ -1,5 +1,4 @@
 #导入库
-from rdkit import Chem
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import KFold, ShuffleSplit, GridSearchCV, cross_val_score, cross_validate
@@ -52,15 +51,7 @@ with st.spinner("Wait for it..."):
 st.success("Done!")
 
 
-#各个机器学习模型参数
-
-LGBM = lgb.LGBMRegressor(n_estimators=540)
-lgb.LGBMRegressor(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
-       importance_type='split', learning_rate=0.1, max_depth=-1,feature_fraction=0.6,bagging_fraction=0.6,
-       min_child_samples=10, min_child_weight=0.1, min_split_gain=0.0,
-       n_estimators=540, n_jobs=-1, objective='regression', num_leaves=30,
-       random_state=None, reg_alpha=0.6, reg_lambda=0.0, silent=True,
-       subsample=0.6, subsample_for_bin=200000, subsample_freq=0)
+#选择机器学习模型
 option = st.selectbox('select your goal',('absorption wavelength', 'abs FWHM'))
 st.write('You selected:', option)
 loaded_model1 = joblib.load('LGBM_absw.dat')
