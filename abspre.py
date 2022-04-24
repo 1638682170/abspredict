@@ -1,26 +1,15 @@
 #导入库
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import KFold, ShuffleSplit, GridSearchCV, cross_val_score, cross_validate
 import os
 import glob
-from scipy.stats import norm
+import time
 import math
 import random
 import streamlit as st
 import time
-from sklearn import preprocessing
 import matplotlib.pylab as plt
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import mean_squared_error 
-from sklearn import metrics
 import matplotlib.pyplot as plt
-import seaborn as sns
-import lightgbm as lgb
-plt.style.use('ggplot')
-from sklearn.neural_network import MLPRegressor
-from sklearn.ensemble import RandomForestRegressor
-from sklearn import linear_model
 import joblib
 
 
