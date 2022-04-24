@@ -8,8 +8,6 @@ import math
 import random
 import streamlit as st
 import time
-import matplotlib.pylab as plt
-import matplotlib.pyplot as plt
 import joblib
 
 
